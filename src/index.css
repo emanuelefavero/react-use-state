@@ -93,7 +93,7 @@ body {
   color: var(--foreground);
   background: var(--background);
   min-height: 100svh;
-  min-width: 320px;
+  min-width: 300px;
   font-family: var(--sans);
   line-height: 1.5;
   letter-spacing: 0;
@@ -165,6 +165,10 @@ body {
 /* Typography: Font Weight */
 .font-normal {
   font-weight: 400;
+}
+
+.font-medium {
+  font-weight: 500;
 }
 
 .font-semibold {

@@ -1,4 +1,5 @@
 import { cx } from '../../lib/utils.js';
+import './Tabs.css';
 
 export const Tabs = ({ children, className, ...props }) => (
   <div className={cx('tabs', className)} {...props}>
@@ -22,7 +23,7 @@ export const TabsTrigger = ({
 }) => (
   <button
     type='button'
-    className={cx('tabs-trigger', className)}
+    className={cx('tabs-trigger', 'font-medium', className)}
     role='tab'
     id={`tab-${value}`}
     aria-selected={isActive}

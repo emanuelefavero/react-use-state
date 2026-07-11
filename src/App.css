@@ -7,7 +7,7 @@
   .main {
     .container {
       padding-block: 2.5rem;
-      padding-inline: 3rem;
+      padding-inline: clamp(1rem, 5vw, 3rem);
     }
   }
 }

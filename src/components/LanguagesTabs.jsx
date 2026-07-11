@@ -32,7 +32,8 @@ export const LanguagesTabs = () => {
       </TabsList>
 
       <TabsContent value={activeLanguageId}>
-        {activeLanguage?.description}
+        <h2 className='font-semibold'>{activeLanguage?.title}</h2>
+        <p className='text-lg'>{activeLanguage?.description}</p>
       </TabsContent>
     </Tabs>
   );
