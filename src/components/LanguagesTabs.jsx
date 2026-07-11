@@ -12,9 +12,7 @@ export const LanguagesTabs = () => {
 
   const activeLanguage = languages.find(({ id }) => id === activeLanguageId);
 
-  const handleLanguageChange = (languageId) => {
-    setActiveLanguageId(languageId);
-  };
+  const handleLanguageChange = (languageId) => setActiveLanguageId(languageId);
 
   return (
     <Tabs>
