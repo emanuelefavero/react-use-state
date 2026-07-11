@@ -1,0 +1,13 @@
+.app {
+  .header {
+    background-color: var(--background-secondary);
+    padding-block: 1rem;
+  }
+
+  .main {
+    .container {
+      padding-block: 2.5rem;
+      padding-inline: 3rem;
+    }
+  }
+}
