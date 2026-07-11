@@ -1,20 +1,15 @@
 import { cx } from '@/lib/utils';
 import './Tabs.css';
 
-export const Tabs = ({ children, className, ...props }) => (
-  <div className={cx('tabs', className)} {...props}>
-    {children}
-  </div>
+export const Tabs = ({ className, ...props }) => (
+  <div className={cx('tabs', className)} {...props} />
 );
 
-export const TabsList = ({ children, className, ...props }) => (
-  <div className={cx('tabs-list', className)} role='tablist' {...props}>
-    {children}
-  </div>
+export const TabsList = ({ className, ...props }) => (
+  <div className={cx('tabs-list', className)} role='tablist' {...props} />
 );
 
 export const TabsTrigger = ({
-  children,
   value,
   isActive,
   onValueChange,
@@ -31,12 +26,10 @@ export const TabsTrigger = ({
     tabIndex={isActive ? 0 : -1}
     onClick={() => onValueChange(value)}
     {...props}
-  >
-    {children}
-  </button>
+  />
 );
 
-export const TabsContent = ({ children, value, className, ...props }) => {
+export const TabsContent = ({ value, className, ...props }) => {
   return (
     <div
       className={cx('tabs-content', className)}
@@ -44,8 +37,6 @@ export const TabsContent = ({ children, value, className, ...props }) => {
       id={`panel-${value}`}
       aria-labelledby={`tab-${value}`}
       {...props}
-    >
-      {children}
-    </div>
+    />
   );
 };
