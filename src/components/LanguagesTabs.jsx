@@ -1,46 +1,39 @@
-import { languages } from '../data/languages.js';
-import './LanguagesTabs.css';
 import { useState } from 'react';
+import { languages } from '../data/languages.js';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/Tabs.jsx';
+import './LanguagesTabs.css';
 
-const DEFAULT_VALUE = languages[0].id || 1;
+const DEFAULT_LANGUAGE_ID = languages[0]?.id ?? null;
 
 export const LanguagesTabs = () => {
-  const [activeValue, setActiveValue] = useState(DEFAULT_VALUE);
-  const activeItem = languages.find((item) => item.id === activeValue);
+  const [activeLanguageId, setActiveLanguageId] = useState(DEFAULT_LANGUAGE_ID);
 
-  const handleValueChange = (value) => {
-    if (value !== activeValue) setActiveValue(value);
+  if (activeLanguageId === null) return null;
+
+  const activeLanguage = languages.find(({ id }) => id === activeLanguageId);
+
+  const handleLanguageChange = (languageId) => {
+    setActiveLanguageId(languageId);
   };
 
   return (
-    // Tabs
-    <div className='tabs'>
-      {/* TabsList */}
-      <div className='tabs-list' role='tablist'>
+    <Tabs>
+      <TabsList aria-label='Programming languages'>
         {languages.map(({ id, title }) => (
-          // TabsTrigger
-          <button
+          <TabsTrigger
             key={id}
-            className='tabs-trigger'
-            role='tab'
-            id={`tab-${id}`}
-            onClick={() => handleValueChange(id)}
+            value={id}
+            isActive={id === activeLanguageId}
+            onValueChange={handleLanguageChange}
           >
             {title}
-          </button>
+          </TabsTrigger>
         ))}
-      </div>
+      </TabsList>
 
-      {/* TabsContent */}
-      {activeItem && (
-        <div
-          className='tabs-content'
-          role='tabpanel'
-          aria-labelledby={`tab-${activeItem.id}`}
-        >
-          {activeItem.description}
-        </div>
-      )}
-    </div>
+      <TabsContent value={activeLanguageId}>
+        {activeLanguage?.description}
+      </TabsContent>
+    </Tabs>
   );
 };
