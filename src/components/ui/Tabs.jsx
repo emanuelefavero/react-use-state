@@ -40,3 +40,20 @@ export const TabsContent = ({ value, className, ...props }) => {
     />
   );
 };
+
+const TabsContentTitle = ({ className, ...props }) => (
+  <h2
+    className={cx('tabs-content-title', 'font-semibold', className)}
+    {...props}
+  />
+);
+
+const TabsContentDescription = ({ className, ...props }) => (
+  <p
+    className={cx('tabs-content-description', 'text-lg', className)}
+    {...props}
+  />
+);
+
+TabsContent.Title = TabsContentTitle;
+TabsContent.Description = TabsContentDescription;
