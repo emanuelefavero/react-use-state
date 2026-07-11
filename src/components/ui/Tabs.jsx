@@ -1,4 +1,4 @@
-import { cx } from '../../lib/utils.js';
+import { cx } from '@/lib/utils';
 import './Tabs.css';
 
 export const Tabs = ({ children, className, ...props }) => (

@@ -1,5 +1,5 @@
 import './App.css';
-import { LanguagesTabs } from './components/LanguagesTabs';
+import { LanguagesTabs } from '@/components/LanguagesTabs';
 
 export function App() {
   return (

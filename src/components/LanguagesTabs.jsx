@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { languages } from '../data/languages.js';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/Tabs.jsx';
+import { languages } from '@/data/languages';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/Tabs';
 import './LanguagesTabs.css';
 
 const DEFAULT_LANGUAGE_ID = languages[0]?.id ?? null;
