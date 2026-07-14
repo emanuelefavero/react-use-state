@@ -1,5 +1,6 @@
 import { cx } from '@/lib/utils';
 import './Tabs.css';
+import { Button } from './Button';
 
 export const Tabs = ({ className, ...props }) => (
   <div className={cx('tabs', className)} {...props} />
@@ -16,14 +17,13 @@ export const TabsTrigger = ({
   className,
   ...props
 }) => (
-  <button
-    type='button'
+  <Button
+    variant={isActive ? Button.variant.warning : Button.variant.primary}
     className={cx('tabs-trigger', 'font-medium', className)}
     role='tab'
     id={`tab-${value}`}
     aria-selected={isActive}
     aria-controls={`panel-${value}`}
-    tabIndex={isActive ? 0 : -1}
     onClick={() => onValueChange(value)}
     {...props}
   />

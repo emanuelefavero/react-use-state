@@ -10,19 +10,6 @@
   gap: 1rem;
 }
 
-.tabs-trigger {
-  background-color: var(--primary);
-  color: var(--background);
-  padding-block: 0.6rem;
-  padding-inline: 1rem;
-  border-radius: 0.5rem;
-
-  &[aria-selected='true'] {
-    background-color: var(--warning);
-    color: var(--foreground);
-  }
-}
-
 .tabs-content {
   border: 1px solid var(--border);
   border-radius: 0.5rem;

@@ -1,0 +1,15 @@
+.button {
+  border-radius: 0.5rem;
+  padding-block: 0.6rem;
+  padding-inline: 1rem;
+
+  &.primary {
+    background-color: var(--primary);
+    color: var(--background);
+  }
+
+  &.warning {
+    background-color: var(--warning);
+    color: var(--foreground);
+  }
+}
