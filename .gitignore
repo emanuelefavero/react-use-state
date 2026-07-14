@@ -24,7 +24,5 @@ dist-ssr
 *.sw?
 
 # Agents
-.agents
-.playwright-mcp
-
 .agents/
+.playwright-mcp
